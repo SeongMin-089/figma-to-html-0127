@@ -44,6 +44,19 @@ fixedArrow.addEventListener("click", () => {
  });
 });
 
+var swiper = new Swiper(".gallery", {
+      pagination: {
+        el: ".gallery .swiper-pagination",
+      },
+      navigation: {
+        nextEl: ".gallery .swiper-button-next",
+        prevEl: ".gallery .swiper-button-prev",
+      },
+      loop:true
+    //   autoplay:true
+    });
+
+    
 
 const sec5MenuList = document.querySelectorAll(".sec-5-menu li");
 const sec5ContentList = document.querySelectorAll(".sec-5-content-wrap .content");
