@@ -43,7 +43,7 @@ fixedArrow.addEventListener("click", () => {
   behavior: "smooth",
  });
 });
-
+// sec1
 var swiper = new Swiper(".gallery", {
       pagination: {
         el: ".gallery .swiper-pagination",
@@ -57,12 +57,41 @@ var swiper = new Swiper(".gallery", {
     });
 
     
+// sec3
+const bgWrap= document.querySelectorAll('.sec-3 .bg-wrap > div ')
 
+bgWrap[0].classList.add('active')
+// active
+
+var sec3slider = new Swiper(".sec-3-slider", {
+  loop:true,
+  navigation: {
+    nextEl: ".sec-3 .next",
+    prevEl: ".sec-3 .prev",
+  },
+  on:{
+    activeIndexChange:function(){
+        const i = this.realIndex
+
+        console.log(`현재 index ${i}`)
+        bgWrap.forEach((bg)=>bg.classList.remove('active'))
+        bgWrap[i].classList.add('active')
+
+    }
+  }
+});
+
+
+
+
+
+
+
+
+// sec5
 const sec5MenuList = document.querySelectorAll(".sec-5-menu li");
 const sec5ContentList = document.querySelectorAll(".sec-5-content-wrap .content");
 let crr = 0;
-
-
 
 init(crr);
 
@@ -86,3 +115,7 @@ sec5MenuList.forEach((menu, index) => {
   init(index);
  });
 });
+
+
+
+
